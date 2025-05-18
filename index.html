@@ -88,10 +88,11 @@
     .wetboek-tabel tbody tr:nth-child(odd) {
       background-color: #1e1e1e;
     }
-    .dropdown {
-  position: relative;
-  display: inline-block;
-  margin-left: 2rem;
+  .dropdown-menu {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 1000;
 }
 
 .dropbtn {
@@ -100,18 +101,23 @@
   padding: 10px 16px;
   font-size: 1rem;
   border: none;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  background-color: #3a3a3a;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
+  right: 0;
   background-color: #1e1e1e;
   min-width: 180px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-  z-index: 1;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .dropdown-content a {
@@ -122,22 +128,28 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #333333;
+  background-color: #333;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-menu:hover .dropdown-content {
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #3a3a3a;
-}
   </style>
 </head>
 <body>
   <header>
     <img src="laporta-logo-optimized.png" alt="Laporta RP Logo" />
     <h1>Laporta RP Algemene Plaatselijke Verordening</h1>
+        <div class="dropdown-menu">
+  <button class="dropbtn">Menu ▾</button>
+  <div class="dropdown-content">
+    <a href="https://laporta-rp.nl" target="_blank">Laporta RP Website</a>
+    <a href="https://discord.gg/laporta" target="_blank">Discord</a>
+    <a href="https://github.com/laporta-rp" target="_blank">GitHub</a>
+    <a href="https://fivem.net/" target="_blank">FiveM</a>
+  </div>
+</div>
   </header>
       
   <main>
