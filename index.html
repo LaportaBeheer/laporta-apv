@@ -1,45 +1,117 @@
       
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laporta RP - APV</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laporta RP Algemene Plaatselijke Verordening</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f1f1f1;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+    }
+    header img {
+      height: 60px;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #ffffff;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .zoekveld {
+      margin-bottom: 2rem;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
+      background-color: #2a2a2a;
+      color: #f1f1f1;
+    }
+    details {
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+    summary {
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #e0e0e0;
+    }
+    summary:hover {
+      color: #ffffff;
+    }
+    article {
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+    }
+    .wetboek-tabel {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+    .wetboek-tabel th, .wetboek-tabel td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: center;
+    }
+    .wetboek-tabel thead {
+      background-color: #2d2d2d;
+      font-weight: bold;
+    }
+    .wetboek-tabel tbody tr:nth-child(even) {
+      background-color: #2a2a2a;
+    }
+    .wetboek-tabel tbody tr:nth-child(odd) {
+      background-color: #1e1e1e;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white">
-
-  <!-- Header -->
-  <header class="bg-gray-800 border-b border-gray-700 shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        
-        <!-- Logo & Titel -->
-        <div class="flex items-center space-x-4">
-          <img src="images/laporta-logo-optimized.png" alt="Laporta Logo" class="h-10 w-10 rounded-full border border-gray-600" />
-          <span class="text-xl sm:text-2xl font-semibold text-white">Algemene Plaatselijke Verordening</span>
-        </div>
-        
-        <!-- Navigatie -->
-        <nav class="hidden md:flex space-x-6">
-          <a href="#regels" class="text-gray-300 hover:text-white transition">Regels</a>
-          <a href="#toezicht" class="text-gray-300 hover:text-white transition">Strafbepaling</a>
-          <a href="#handhaving" class="text-gray-300 hover:text-white transition">Aanvullende wetten</a>
-        </nav>
-      </div>
-    </div>
+<body>
+  <header>
+    <img src="laporta-logo-optimized.png" alt="Laporta RP Logo" />
+    <h1>Laporta RP Algemene Plaatselijke Verordening</h1>
   </header>
+  <main>
+    <div class="zoekveld">
+      <input type="text" id="zoekInput" oninput="zoekArtikelen()" placeholder="Zoek op artikelnummer of trefwoord..." />
+    </div>
 
 
     <main>
         <section>
-            <h2>Algemene Bepalingen</h2>
+            <h2 font-weight:bold;">Algemene Bepalingen</h2>
             <article>
                 <p class="article-title">A1 - Reikwijdte</p>
                 <p>Deze APV vormt een aanvulling op het Nederlandse recht en is van toepassing op het eiland, de gemeente en de stad binnen Laporta Roleplay.</p>
                 <p>De APV geeft een richtlijn voor sancties binnen het spel (“in RP”), maar is voornamelijk bedoeld voor het verwerken van straffen buiten de RP-context.</p>
             </article>
+
+    <br><br>
+
             <article>
                 <p class="article-title">A2 - Geldigheid</p>
                 <p>Bij veranderingen van wetgeving wordt de gunstigste bepaling voor de verdachte toegepast.</p>
