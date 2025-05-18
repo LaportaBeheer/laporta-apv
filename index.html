@@ -489,5 +489,19 @@
     <footer>
         &copy; 2025 Laporta RP - Hoge Raad Laporta Roleplay | Alle rechten voorbehouden
     </footer>
+      <script>
+  function zoekArtikelen() {
+    const input = document.getElementById("zoekInput").value.toLowerCase();
+    const artikelen = document.querySelectorAll("article");
+    artikelen.forEach(artikel => {
+      const tekst = artikel.innerText.toLowerCase();
+      if (tekst.includes(input)) {
+        artikel.style.display = ""; // reset naar standaard
+      } else {
+        artikel.style.display = "none";
+      }
+    });
+  }
+</script>
 </body>
 </html>
