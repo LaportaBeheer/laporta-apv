@@ -509,6 +509,30 @@
       }
     });
   }
+            function zoekArtikelen() {
+      const input = document.getElementById("zoekInput").value.toLowerCase();
+      const artikelen = document.querySelectorAll("article");
+
+      artikelen.forEach(artikel => {
+        if (artikel.classList.contains("no-search")) {
+          artikel.style.display = "none"; // Altijd verbergen
+        } else {
+          const tekst = artikel.innerText.toLowerCase();
+          if (tekst.includes(input)) {
+            artikel.style.display = ""; // Weergeven als zoekterm wordt gevonden
+          } else {
+            artikel.style.display = "none"; // Verbergen als zoekterm niet wordt gevonden
+          }
+        }
+      });
+
+      // Als er geen zoekterm is, toon dan alle artikelen
+      if (input === "") {
+        artikelen.forEach(artikel => {
+          artikel.style.display = ""; // Herstel de zichtbaarheid voor alle artikelen
+        });
+      }
+    }
 </script>
 </body>
 </html>
